@@ -1,0 +1,15 @@
+type: object
+properties: 
+  height:
+    type: number
+    description: visota product
+  widht:
+    type: number
+    description: shirina product
+  lenght:
+    type: number
+    description: dlina product
+  weight:
+    type: number
+    description: ves product
+  
