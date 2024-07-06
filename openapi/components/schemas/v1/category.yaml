@@ -8,3 +8,11 @@ properties:
     type: string
   description:
     type: string
+  dateCreated:
+    type: string
+    format: date-time
+    description: The date the category was created
+  dateUpdated:
+    type: string
+    format: date-time
+    description: The date the category was updated    

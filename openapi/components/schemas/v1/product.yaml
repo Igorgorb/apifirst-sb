@@ -8,13 +8,26 @@ properties:
     type: string
   description:
     type: string
+    description: The description of the product
   dimensions:
-    $ref: dimension.yaml
-  category:
+    $ref: dimensions.yaml
+  categories:
+    type: array
     $ref: category.yaml
   images:
-    $ref: image_list.yaml
+    type: array
+    $ref: image.yaml
   price:
-    type: number
+    type: string
+    pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
   cost:
-    type: number
+    type: string
+    pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
+  dateCreated:
+    type: string
+    format: date-time
+    description: The date the product was created
+  dateUpdated:
+    type: string
+    format: date-time
+    description: The date the product was updated    
