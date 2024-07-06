@@ -14,6 +14,5 @@ properties:
     type: string
   phone:
     type: string
-  paymentMethodd:
-    type: array
+  selectedPaymentMethodd:
     $ref: payment_method.yaml
