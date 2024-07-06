@@ -2,15 +2,23 @@ type: object
 properties:
   prefix:
     type: string
-    description: Name prefix  
+    description: Name prefix
+    minLength: 0
+    maxLength: 25
   firstName:
     type: string
     description: The first name of the customer.
-    example: Jhon
+    example: Jhon    
+    minLength: 2
+    maxLength: 100
   lastName:
     type: string
     description: The last name of the customer.
     example: Horbonos
+    minLength: 2
+    maxLength: 100
   suffix:
     type: string
     description: Name Suffix
+    minLength: 2
+    maxLength: 25
