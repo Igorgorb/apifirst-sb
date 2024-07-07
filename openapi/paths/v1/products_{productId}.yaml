@@ -19,7 +19,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ..\..\components\schemas\v1\product.yaml
+            $ref: ../../components/schemas/v1/product.yaml
     '400':
       description: Bad Request
     '404':
@@ -27,4 +27,4 @@ get:
       content: 
         application/json:
           schema: 
-            $ref: ..\..\components\schemas\Problem.yaml
+            $ref: ../../components/schemas/Problem.yaml
