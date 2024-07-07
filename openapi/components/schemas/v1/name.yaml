@@ -22,3 +22,6 @@ properties:
     description: Name Suffix
     minLength: 2
     maxLength: 25
+required: 
+  - firstName
+  - lastName

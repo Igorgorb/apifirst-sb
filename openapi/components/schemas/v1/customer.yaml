@@ -21,3 +21,7 @@ properties:
   paymentMethodd:
     type: array
     $ref: payment_method.yaml
+required: 
+  - name
+  - shipToAddress
+  - billToAddress
