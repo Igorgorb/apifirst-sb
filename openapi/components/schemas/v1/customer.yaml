@@ -18,9 +18,10 @@ properties:
     type: string
     maxLength: 15
     minLength: 7
-  paymentMethodd:
+  paymentMethods:
     type: array
-    $ref: payment_method.yaml
+    items: 
+      $ref: payment_method.yaml
 required: 
   - name
   - shipToAddress

@@ -13,10 +13,12 @@ properties:
     $ref: dimensions.yaml
   categories:
     type: array
-    $ref: category.yaml
+    items:
+      $ref: category.yaml
   images:
     type: array
-    $ref: image.yaml
+    items: 
+      $ref: image.yaml
   price:
     type: string
     pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
