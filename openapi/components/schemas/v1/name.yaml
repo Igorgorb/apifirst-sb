@@ -5,18 +5,19 @@ properties:
     description: Name prefix
     minLength: 0
     maxLength: 25
+    example: Mr.
   firstName:
     type: string
     description: The first name of the customer.
-    example: Jhon    
     minLength: 2
     maxLength: 100
+    example: Jhon    
   lastName:
     type: string
     description: The last name of the customer.
-    example: Horbonos
     minLength: 2
     maxLength: 100
+    example: Horbonos
   suffix:
     type: string
     description: Name Suffix
