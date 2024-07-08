@@ -4,15 +4,27 @@ properties:
     type: string
     format: uuid
     description: Unique identifier representing a specific category.
-  name:
+    readOnly: true
+  category:
     type: string
+    minLength: 3
+    maxLength: 25
+    example: Sport, DIY, Camping
   description:
     type: string
+    minLength: 5
+    maxLength: 150
+    example: The description of the category
   dateCreated:
     type: string
     format: date-time
     description: The date the category was created
+    readOnly: true
   dateUpdated:
     type: string
     format: date-time
-    description: The date the category was updated    
+    description: The date the category was updated 
+    readOnly: true
+required: 
+  - category
+  - description
