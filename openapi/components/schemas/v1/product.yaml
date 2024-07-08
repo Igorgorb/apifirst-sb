@@ -1,0 +1,52 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: Unique identifier representing a specific product.
+    readOnly: true
+  name:
+    type: string
+    minLength: 2
+    maxLength: 100
+    example: My beautiful product
+  description:
+    type: string
+    description: The description of the product
+    minLength: 10
+    maxLength: 250
+    example: Description my beautiful product
+  dimensions:
+    $ref: dimensions.yaml
+  categories:
+    type: array
+    items:
+      $ref: category.yaml
+  images:
+    type: 
+      - array
+      - 'null'
+    items: 
+      $ref: image.yaml
+  price:
+    type: string
+    minLength: 1
+    maxLength: 10
+    pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
+    example: 1,234.56
+  cost:
+    minLength: 1
+    maxLength: 10
+    type: string
+    pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
+    example: 1,234.56
+  dateCreated:
+    $ref: ../common/iso_timestamp.yaml
+  dateUpdated:
+    $ref: ../common/iso_timestamp.yaml
+required: 
+  - name
+  - description
+  - price
+  - cost
+  - dimensions

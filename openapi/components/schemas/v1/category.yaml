@@ -1,0 +1,24 @@
+type: object
+properties: 
+  id:
+    type: string
+    format: uuid
+    description: Unique identifier representing a specific category.
+    readOnly: true
+  category:
+    type: string
+    minLength: 3
+    maxLength: 25
+    example: Sport, DIY, Camping
+  description:
+    type: string
+    minLength: 5
+    maxLength: 150
+    example: The description of the category
+  dateCreated:
+    $ref: ../common/iso_timestamp.yaml
+  dateUpdated:
+    $ref: ../common/iso_timestamp.yaml
+required: 
+  - category
+  - description
