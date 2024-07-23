@@ -23,9 +23,7 @@ properties:
     items:
       $ref: category.yaml
   images:
-    type: 
-      - array
-      - 'null'
+    type: array
     items: 
       $ref: image.yaml
   price:
