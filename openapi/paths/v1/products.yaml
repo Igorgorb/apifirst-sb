@@ -19,7 +19,7 @@ get:
             $ref: ../../components/schemas/Problem.yaml
 post: 
   tags: 
-    -  Products
+    - Product
   summary: Create new product
   description: Create new product.
   operationId: createProduct
