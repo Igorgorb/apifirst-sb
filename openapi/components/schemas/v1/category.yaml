@@ -5,6 +5,7 @@ properties:
     format: uuid
     description: Unique identifier representing a specific category.
     readOnly: true
+    nullable: true
   category:
     type: string
     minLength: 3
