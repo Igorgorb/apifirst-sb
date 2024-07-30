@@ -16,20 +16,16 @@ info:
   description: >
     This is an **example** API to demonstrate features of the OpenAPI
     specification.
-
-    # Introduction
-
-    guesswork in calling the service.
 externalDocs:
   description: "Find out how to create a GitHub repo for your OpenAPI definition."
   url: 'https://github.com/Redocly/create-openapi-repo'
 tags:
   - name: Customer
-    description: "Customer operations."
+    description: Customer operations.
   - name: Product
-    description: "Product operations."
+    description: Product operations.
   - name: Order
-    description: "Operations about orders."
+    description: Operations about orders.
 x-tagGroups:
   - name: General
     tags:
@@ -44,18 +40,18 @@ servers:
         description: Your tenant id
   - url: https://example.com/api/v1
 paths:
-  '/v1/customers':
-    $ref: 'paths/v1/customers.yaml'
-  '/v1/customers/{customerId}':
+  /v1/customers:
+    $ref: paths/v1/customers.yaml
+  /v1/customers/{customerId}:
     $ref: paths/v1/customers_{customerId}.yaml
-  '/v1/products':
-    $ref: 'paths/v1/products.yaml'
-  '/v1/products/{productId}':
-    $ref: 'paths/v1/products_{productId}.yaml'
-  '/v1/orders':
-    $ref: 'paths/v1/orders.yaml'
-  '/v1/orders/{orderId}':
-    $ref: 'paths/v1/orders_{orderId}.yaml'
+  /v1/products:
+    $ref: paths/v1/products.yaml
+  /v1/products/{productId}:
+    $ref: paths/v1/products_{productId}.yaml
+  /v1/orders:
+    $ref: paths/v1/orders.yaml
+  /v1/orders/{orderId}:
+    $ref: paths/v1/orders_{orderId}.yaml
   
 security: 
   -  basic_auth: []
@@ -68,8 +64,8 @@ components:
         implicit:
           authorizationUrl: http://example.com/api/oauth/dialog
           scopes:
-            'read:users': read user info
-            'write:users': modify or remove users
+            read:users: read user info
+            write:users: modify or remove users
     api_key:
       description: "Example description text of the API key scheme."
       type: apiKey

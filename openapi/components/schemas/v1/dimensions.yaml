@@ -2,25 +2,25 @@ type: object
 properties: 
   height:
     type: integer
-    description: visota product
+    description: The height(visota) of the product
     minimum: 1
     maximum: 999
     example: 10
-  widht:
+  width:
     type: integer
-    description: shirina product
+    description: The width(shirina) of the product
     minimum: 1
     maximum: 999
     example: 10
-  lenght:
+  length:
     type: integer
-    description: dlina product
+    description: The length(dlina) of the product
     minimum: 1
     maximum: 999
     example: 10
 description: The dimentions of the product
 required: 
-  - lenght
-  - widht
+  - length
+  - width
   - height
   
