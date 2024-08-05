@@ -26,12 +26,15 @@ tags:
     description: Product operations.
   - name: Order
     description: Operations about orders.
+  # - name: Category
+  #   description: Categories of product
 x-tagGroups:
   - name: General
     tags:
       - Customer
       - Product
       - Order
+      # - Category
 servers:
   - url: https://{tenant}/api/v1
     variables:
@@ -52,6 +55,8 @@ paths:
     $ref: paths/v1/orders.yaml
   /v1/orders/{orderId}:
     $ref: paths/v1/orders_{orderId}.yaml
+  /v1/categories:
+    $ref: paths/v1/categories.yaml
   
 security: 
   -  basic_auth: []

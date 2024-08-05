@@ -16,6 +16,12 @@ properties:
     minLength: 5
     maxLength: 150
     example: The description of the category
+  category_code:
+    type: string
+    description: The category code of the product
+    minLength: 3
+    maxLength: 25
+    example: CAMPING  
   dateCreated:
     $ref: ../common/iso_timestamp.yaml
   dateUpdated:
@@ -23,3 +29,4 @@ properties:
 required: 
   - category
   - description
+  - category_code
