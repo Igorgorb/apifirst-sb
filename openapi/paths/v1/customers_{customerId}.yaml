@@ -28,3 +28,45 @@ get:
         application/json:
           schema: 
             $ref: ../../components/schemas/Problem.yaml
+put: 
+  tags: 
+    - Customer
+  summary: Update a customer by ID
+  description: |
+    Update a customer by ID
+  operationId: updateCustomerById
+  parameters: 
+    - name: customerId
+      in: path
+      description: The ID of thew customer to update
+      required: true
+      schema: 
+        type: string
+        format: uuid
+  requestBody:
+    required: true 
+    content: 
+      application/json:
+        schema: 
+          $ref: ../../components/schemas/v1/customer.yaml
+  responses: 
+    '200':
+      description: successful operation
+      content: 
+        application/json:
+          schema: 
+            $ref: ../../components/schemas/v1/customer.yaml
+    '400':
+      description: Bad Request
+      content: 
+        application/json: 
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
+    '404':
+      description: Not Found
+      content: 
+        application/json:
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
+    
+  
