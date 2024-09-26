@@ -32,3 +32,41 @@ get:
         application/json: 
           schema: 
             $ref: ../../components/schemas/Problem.yaml
+put: 
+  tags: 
+    - Order
+  summary: Update Order
+  description: Update Order
+  operationId: updateOrder
+  parameters: 
+    - name: orderId
+      in: path
+      description: The ID of the order to retrieve
+      required: true
+      schema: 
+        type: string
+        format: uuid
+  requestBody: 
+    content: 
+      application/json: 
+        schema: 
+          $ref: ../../components/schemas/v1/order_update.yaml
+  responses:
+    '200':
+      description: Order Updated
+      content: 
+        application/json:
+          schema: 
+            $ref: ../../components/schemas/v1/order.yaml
+    '400':
+      description: Bad Request 
+      content: 
+        application/json: 
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
+    '404':
+      description: Not Found
+      content: 
+        application/json: 
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
