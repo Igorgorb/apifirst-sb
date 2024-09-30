@@ -72,4 +72,43 @@ put:
         application/json:
           schema: 
             $ref: ../../components/schemas/Problem.yaml
-  
+patch: 
+  tags: 
+    - Product
+  summary: Patch a product by ID
+  description: |
+    Patch a product by ID
+  operationId: patchProductById
+  parameters: 
+    - name: productId
+      in: path
+      description: The ID of thew product to update
+      required: true
+      schema: 
+        type: string
+        format: uuid
+  requestBody:
+    required: true 
+    content: 
+      application/json:
+        schema: 
+          $ref: ../../components/schemas/v1/product_patch.yaml
+  responses: 
+    '200':
+      description: successful operation
+      content: 
+        application/json:
+          schema: 
+            $ref: ../../components/schemas/v1/product.yaml
+    '400':
+      description: Bad Request
+      content: 
+        application/json: 
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
+    '404':
+      description: Not Found
+      content: 
+        application/json:
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
