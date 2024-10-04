@@ -4,8 +4,6 @@ properties:
     type: string
     format: uuid
     description: Unique identifier representing a specific payment method
-    readOnly: true
-    nullable: true
   displayName: 
     type: string
     minLength: 2
@@ -23,13 +21,3 @@ properties:
   cvv:
     type: integer
     example: 123
-  dateCreated:
-    $ref: ../common/iso_timestamp.yaml
-  dateUpdated:
-    $ref: ../common/iso_timestamp.yaml
-required: 
-  - displayName
-  - cardNumber
-  - expiryMonth
-  - expiryYear
-  - cvv  

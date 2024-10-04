@@ -68,5 +68,45 @@ put:
         application/json:
           schema: 
             $ref: ../../components/schemas/Problem.yaml
+patch: 
+  tags: 
+    - Customer
+  summary: Patch a Customer by ID
+  description: |
+    Patch a Customer by ID
+  operationId: patchCustomertById
+  parameters: 
+    - name: customerId
+      in: path
+      description: The ID of thew Customer to update
+      required: true
+      schema: 
+        type: string
+        format: uuid
+  requestBody:
+    required: true 
+    content: 
+      application/json:
+        schema: 
+          $ref: ../../components/schemas/v1/customer_patch.yaml
+  responses: 
+    '200':
+      description: successful operation
+      content: 
+        application/json:
+          schema: 
+            $ref: ../../components/schemas/v1/customer.yaml
+    '400':
+      description: Bad Request
+      content: 
+        application/json: 
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
+    '404':
+      description: Not Found
+      content: 
+        application/json:
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
     
   
