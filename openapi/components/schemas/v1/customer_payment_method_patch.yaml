@@ -21,5 +21,3 @@ properties:
   cvv:
     type: integer
     example: 123
-  required: 
-    - id
