@@ -1,0 +1,24 @@
+type: object
+properties:
+  name:
+    $ref: name.yaml
+  shipToAddress:
+    $ref: address.yaml
+  billToAddress:
+    $ref: address.yaml
+  email:
+    type: string
+    maxLength: 255
+    minLength: 3
+    example: igorgorb@gmail.com
+    nullable: true
+  phone:
+    type: string
+    maxLength: 15
+    minLength: 7
+    example: 800-555-1212
+    nullable: true
+  paymentMethods:
+    type: array
+    items: 
+      $ref: customer_payment_method_patch.yaml
