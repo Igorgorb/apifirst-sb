@@ -7,7 +7,7 @@ properties:
     readOnly: true
     nullable: true
   name:
-    $ref: customer_name_patch.yaml
+    $ref: name.yaml
   shipToAddress:
     $ref: customer_address_patch.yaml
     nullable: true
