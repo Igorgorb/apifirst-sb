@@ -6,13 +6,7 @@ get:
     Get a product by ID
   operationId: getProductById
   parameters: 
-    - name: productId
-      in:  path
-      description: The ID of the product to retrieve
-      required: true
-      schema: 
-        type: string
-        format: uuid
+    - $ref: ../../components/parameters/product_id.yaml
   responses:
     '200':
       description: Successful operation
@@ -40,13 +34,7 @@ put:
     Update a product by ID
   operationId: updateProductById
   parameters: 
-    - name: productId
-      in: path
-      description: The ID of thew product to update
-      required: true
-      schema: 
-        type: string
-        format: uuid
+    - $ref: ../../components/parameters/product_id.yaml
   requestBody:
     required: true 
     content: 
@@ -80,13 +68,7 @@ patch:
     Patch a product by ID
   operationId: patchProductById
   parameters: 
-    - name: productId
-      in: path
-      description: The ID of thew product to update
-      required: true
-      schema: 
-        type: string
-        format: uuid
+    - $ref: ../../components/parameters/product_id.yaml
   requestBody:
     required: true 
     content: 
