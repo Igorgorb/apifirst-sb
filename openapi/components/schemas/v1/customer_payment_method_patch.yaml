@@ -9,15 +9,22 @@ properties:
     minLength: 2
     maxLength: 100
     example: My Cashe Card
+    nullable: true
   cardNumber:
     type: integer
     example: 1234567890123456
+    nullable: true
   expiryMonth:
     type: integer
     example: 7
+    nullable: true
   expiryYear:
     type: integer
     example: 26
+    nullable: true
   cvv:
     type: integer
     example: 123
+    nullable: true
+required: 
+  - id

@@ -1,11 +1,19 @@
 type: object
-properties:
+properties:    
+  id:
+    type: string
+    format: uuid
+    description: Unique identifier representing a specific customer
+    readOnly: true
+    nullable: true
   name:
-    $ref: name.yaml
+    $ref: customer_name_patch.yaml
   shipToAddress:
-    $ref: address.yaml
+    $ref: customer_address_patch.yaml
+    nullable: true
   billToAddress:
-    $ref: address.yaml
+    $ref: customer_address_patch.yaml
+    nullable: true
   email:
     type: string
     maxLength: 255
@@ -20,5 +28,6 @@ properties:
     nullable: true
   paymentMethods:
     type: array
+    nullable: true
     items: 
       $ref: customer_payment_method_patch.yaml
