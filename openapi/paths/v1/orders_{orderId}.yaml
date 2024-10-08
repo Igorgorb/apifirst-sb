@@ -90,4 +90,27 @@ patch:
         application/json: 
           schema: 
             $ref: ../../components/schemas/Problem.yaml
-  
+delete: 
+  tags: 
+    - Order
+  summary: Delete Order by ID
+  description: Delete Order by ID
+  operationId: deleteOrderById
+  parameters: 
+    - $ref: ../../components/parameters/order_id.yaml
+  responses:
+    '204':
+      description: No Content
+    '400':
+      description: Bad Request 
+      content: 
+        application/json: 
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
+    '404':
+      description: Not Found
+      content: 
+        application/json: 
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
+    
