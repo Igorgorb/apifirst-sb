@@ -90,5 +90,30 @@ patch:
         application/json:
           schema: 
             $ref: ../../components/schemas/Problem.yaml
+delete: 
+  tags: 
+    - Customer
+  summary: Delete a Customer by ID
+  description: |
+    Delete a Customer by ID
+  operationId: deleteCustomertById
+  parameters: 
+    - $ref: ../../components/parameters/customer_id.yaml
+  responses: 
+    '204':
+      description: No Content
+    '400':
+      description: Bad Request
+      content: 
+        application/json: 
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
+    '404':
+      description: Not Found
+      content: 
+        application/json:
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
+
     
   
