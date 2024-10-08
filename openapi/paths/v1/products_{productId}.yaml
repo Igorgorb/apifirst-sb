@@ -94,3 +94,27 @@ patch:
         application/json:
           schema: 
             $ref: ../../components/schemas/Problem.yaml
+delete:
+  tags:
+    - Product
+  summary: Delete a product by ID
+  description: |
+    Delete a product by ID
+  operationId: deleteProductById
+  parameters: 
+    - $ref: ../../components/parameters/product_id.yaml
+  responses:
+    '204':
+      description: No Content
+    '400':
+      description: Bad Request
+      content: 
+        application/json: 
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
+    '404':
+      description: Not Found
+      content: 
+        application/json:
+          schema: 
+            $ref: ../../components/schemas/Problem.yaml
