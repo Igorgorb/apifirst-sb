@@ -16,16 +16,8 @@ get:
             $ref: ../../components/schemas/v1/product.yaml
     '400':
       description: Bad Request
-      content: 
-        application/json: 
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     '404':
       description: Not Found
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
 put: 
   tags: 
     - Product
@@ -50,16 +42,8 @@ put:
             $ref: ../../components/schemas/v1/product.yaml
     '400':
       description: Bad Request
-      content: 
-        application/json: 
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     '404':
       description: Not Found
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
 patch: 
   tags: 
     - Product
@@ -77,23 +61,15 @@ patch:
           $ref: ../../components/schemas/v1/product_patch.yaml
   responses: 
     '200':
-      description: successful operation
+      description: Successful Operation
       content: 
         application/json:
           schema: 
             $ref: ../../components/schemas/v1/product.yaml
     '400':
       description: Bad Request
-      content: 
-        application/json: 
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     '404':
       description: Not Found
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
 delete:
   tags:
     - Product
@@ -108,19 +84,7 @@ delete:
       description: No Content
     '400':
       description: Bad Request
-      content: 
-        application/json: 
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     '404':
       description: Not Found
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     '409':
       description: Conflict
-      # content: 
-      #   application/json:
-      #     schema: 
-      #       $ref: ../../components/schemas/Problem.yaml

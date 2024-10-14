@@ -13,10 +13,6 @@ get:
             $ref: ../../components/schemas/v1/product_list.yaml
     '404':
       description: Not Found
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
 post: 
   tags: 
     - Product
@@ -39,9 +35,5 @@ post:
             example: /v1/products/bc2348b6-c14e-48a4-876d-51834b39831a
     '400':
       description: Bad Request
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
 
   

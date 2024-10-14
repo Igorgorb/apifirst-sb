@@ -16,16 +16,8 @@ get:
             $ref: ../../components/schemas/v1/customer.yaml
     '400':
       description: Bad Request
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     '404':
       description: Not Found
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
 put: 
   tags: 
     - Customer
@@ -50,16 +42,8 @@ put:
             $ref: ../../components/schemas/v1/customer.yaml
     '400':
       description: Bad Request
-      content: 
-        application/json: 
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     '404':
       description: Not Found
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
 patch: 
   tags: 
     - Customer
@@ -84,16 +68,8 @@ patch:
             $ref: ../../components/schemas/v1/customer.yaml
     '400':
       description: Bad Request
-      content: 
-        application/json: 
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     '404':
       description: Not Found
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
 delete: 
   tags: 
     - Customer
@@ -108,21 +84,9 @@ delete:
       description: No Content
     '400':
       description: Bad Request
-      content: 
-        application/json: 
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     '404':
       description: Not Found
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     '409':
       description: Conflict
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
     
   
