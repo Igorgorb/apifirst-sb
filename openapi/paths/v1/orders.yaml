@@ -37,11 +37,6 @@ post:
             example: /v1/orders/c7436cdf-bacf-405a-b61f-a91fc04c0f46
     '400':
       description: Bad Request
-      content: 
-        application/json:
-          schema: 
-            $ref: ../../components/schemas/Problem.yaml
-
   
     
   
