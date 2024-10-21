@@ -1,6 +1,6 @@
-description: Conflict! The request could not
-   be completed due to a conflict with the current state of the target
-   resource.
+description: >-
+  Unable to complete request due to a conflict with the current state of the
+  target resource. May be due to constraint violation.
 content:
   application/problem+json:
     schema:

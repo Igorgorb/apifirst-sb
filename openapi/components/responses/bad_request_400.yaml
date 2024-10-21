@@ -1,4 +1,7 @@
-description: Bad Request! The request could not be understood by the server due to malformed syntax.
+description: >-
+  Request was received but was invalid. Check format and content of the request. 
+  See the problem detail for more information. 
+  Bad Request! The request could not be understood by the server due to malformed syntax.
 content:
   application/problem+json:
     schema:
