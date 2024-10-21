@@ -34,6 +34,6 @@ post:
             type: string
             example: /v1/products/bc2348b6-c14e-48a4-876d-51834b39831a
     '400':
-      description: Bad Request
+      $ref: ../../components/responses/bad_request_400.yaml
 
   

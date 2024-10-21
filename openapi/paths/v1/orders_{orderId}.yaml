@@ -15,7 +15,7 @@ get:
           schema:
             $ref: ../../components/schemas/v1/order.yaml
     '400':
-      description: Bad Request
+      $ref: ../../components/responses/bad_request_400.yaml
     '404':
       $ref: ../../components/responses/not_found_404.yaml
 put: 
@@ -39,7 +39,7 @@ put:
           schema: 
             $ref: ../../components/schemas/v1/order.yaml
     '400':
-      description: Bad Request
+      $ref: ../../components/responses/bad_request_400.yaml
     '404':
       $ref: ../../components/responses/not_found_404.yaml
 patch: 
@@ -63,7 +63,7 @@ patch:
           schema: 
             $ref: ../../components/schemas/v1/order.yaml
     '400':
-      description: Bad Request
+      $ref: ../../components/responses/bad_request_400.yaml
     '404':
       $ref: ../../components/responses/not_found_404.yaml
 delete: 
@@ -78,7 +78,7 @@ delete:
     '204':
       description: No Content
     '400':
-      description: Bad Request
+      $ref: ../../components/responses/bad_request_400.yaml
     '404':
       $ref: ../../components/responses/not_found_404.yaml
     
