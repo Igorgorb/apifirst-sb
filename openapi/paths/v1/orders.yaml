@@ -12,7 +12,7 @@ get:
           schema:
               $ref: ../../components/schemas/v1/order_list.yaml
     '400':
-      description: Bad Request 
+      $ref: ../../components/responses/bad_request_400.yaml
     '404':
       $ref: ../../components/responses/not_found_404.yaml
 post: 
@@ -36,7 +36,7 @@ post:
             type: string
             example: /v1/orders/c7436cdf-bacf-405a-b61f-a91fc04c0f46
     '400':
-      description: Bad Request
+      $ref: ../../components/responses/bad_request_400.yaml
   
     
   
